@@ -15,11 +15,12 @@
 
     <h1>Stringer</h1>
     <p>A website that does all sorts of formatting on strings!</p>
-    <p>
-        <textarea id="input" rows="6" cols="50">Input the string you want to format here!</textarea>
-    </p>
 
-    <form>
+
+    <form id="form">
+        <p>
+            <textarea id="input" rows="6" cols="50">Input the string you want to format here!</textarea>
+        </p>
         <p>
             <label for="character_insert">Insert a &nbsp;</label>
             <input type="text" id="character_insert" size="3">
@@ -52,11 +53,11 @@
             <button type="button" onclick="lower()">lowercase</button>
             <button type="button" id="trim" onclick="trimbutnotjusttrimbecausethatnameisntallowedforsomereason()">Remove
                 trailing and leading whitespace</button>
-            <!-- <button type="button" id="undo" onclick="undo"></button> -->
+            <button type="button" id="undo" onclick="undoAction()">Undo last action</button>
         </p>
         <br>
         <p>
-            <button type="reset" onclick="resetEverything()">Reset all fields and forms</button>
+            <button type="button" onclick="resetEverything()">Reset all fields and forms</button>
         </p>
     </form>
 

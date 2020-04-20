@@ -1,5 +1,7 @@
+var undoString = document.getElementById("input").value;
 function addToHistory(output) {
     var input = document.getElementById("input").value;
+    undoString = input;
     //if nothing changed don't add to edit history
     if (input == output){
        return; 
@@ -96,4 +98,31 @@ function trimbutnotjusttrimbecausethatnameisntallowedforsomereason() {
     addToHistory(output);
     document.getElementById("input").value = output;
 
+}
+
+function resetEverything(){
+  var c = confirm("Are you sure? EVERYTHING will be gone, including edit history.") 
+  if(c){
+      document.getElementById("form").reset();
+      document.getElementById("history").innerHTML = "";
+      return true
+  }
+//   else{
+//       return false
+//   }
+}
+
+function undoAction(){
+    document.getElementById("input").value = undoString;
+    //Add the thing to history but not to undo value because things are confusing
+    var input = document.getElementById("input").value;
+    //if nothing changed don't add to edit history
+    if (input == output){
+       return; 
+    }
+    var node = document.createTextNode(output);
+    var wrapper = document.createElement("p");
+    wrapper.appendChild(document.createElement("br"))
+    wrapper.appendChild(node)
+    document.getElementById("history").prepend(wrapper);
 }
