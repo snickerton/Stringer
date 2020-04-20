@@ -50,12 +50,13 @@
             <button type="button" onclick="reverseStr()">Reverse string</button>
             <button type="button" onclick="upper()">UPPERCASE</button>
             <button type="button" onclick="lower()">lowercase</button>
-            <button type="button" id="trim" onclick="trimbutnotjusttrimbecausethatnameisntallowedforsomereason()">Remove trailing and leading whitespace</button>
-            <button type="button" id="undo" onclick="undo"
+            <button type="button" id="trim" onclick="trimbutnotjusttrimbecausethatnameisntallowedforsomereason()">Remove
+                trailing and leading whitespace</button>
+            <!-- <button type="button" id="undo" onclick="undo"></button> -->
         </p>
         <br>
         <p>
-            <button type="reset">Reset all fields and forms</button>
+            <button type="reset" onclick="resetEverything()">Reset all fields and forms</button>
         </p>
     </form>
 
@@ -65,8 +66,12 @@
 
     <br>
     <br>
-    <div id="history">
+
+    <h2>
         EDIT HISTORY:
+    </h2>
+
+    <div id="history">
     </div>
 
     <script src="scripts.js"></script>

@@ -1,9 +1,19 @@
-var input = document.getElementById("input").value;
-var output = "";
+function addToHistory(output) {
+    var input = document.getElementById("input").value;
+    //if nothing changed don't add to edit history
+    if (input == output){
+       return; 
+    }
+    var node = document.createTextNode(output);
+    var wrapper = document.createElement("p");
+    wrapper.appendChild(document.createElement("br"))
+    wrapper.appendChild(node)
+    document.getElementById("history").prepend(wrapper);
+}
 
 function insertCharacters() {
-var input = document.getElementById("input").value;
-var output = "";
+    var input = document.getElementById("input").value;
+    var output = "";
 
     var charInsert = document.getElementById("character_insert").value;
     var indexInsert = document.getElementById("index_insert").value;
@@ -16,12 +26,13 @@ var output = "";
         // console.log(input[i]);
     }
 
+    addToHistory(output);
     document.getElementById("input").value = output;
 }
 
 function replace() {
-var input = document.getElementById("input").value;
-var output = "";
+    var input = document.getElementById("input").value;
+    var output = "";
 
     var rOld = document.getElementById("replace_old").value;
     var rNew = document.getElementById("replace_new").value;
@@ -40,48 +51,49 @@ var output = "";
         alert("\"" + rOld + "\" not found in original string. :(");
     }
 
+    addToHistory(output);
     document.getElementById("input").value = output;
 
 }
 
 function reverseStr() {
-var input = document.getElementById("input").value;
-var output = "";
+    var input = document.getElementById("input").value;
+    var output = "";
 
     output = input.split("").reverse().join("");
 
-    var node = document.createTextNode(output);
-    var wrapper = document.createElement("p"); 
-    wrapper.appendChild(node)
-    document.getElementById("history").appendChild(wrapper);
-
+    addToHistory(output);
     document.getElementById("input").value = output;
 }
 
 function upper() {
-var input = document.getElementById("input").value;
-var output = "";
+    var input = document.getElementById("input").value;
+    var output = "";
 
-    output = input.trim();
-
+    output = input.toUpperCase();
+    
+    addToHistory(output);
     document.getElementById("input").value = output;
 }
 
 function lower() {
-var input = document.getElementById("input").value;
-var output = "";
+    var input = document.getElementById("input").value;
+    var output = "";
 
-    output = input.trim();
+    output = input.toLowerCase();
 
+    addToHistory(output);
     document.getElementById("input").value = output;
 }
 
 function trimbutnotjusttrimbecausethatnameisntallowedforsomereason() {
-var input = document.getElementById("input").value;
-var output = "";
+    var input = document.getElementById("input").value;
+    var output = "";
 
     output = input.trim();
     // alert(output.trim())
+
+    addToHistory(output);
     document.getElementById("input").value = output;
 
 }
