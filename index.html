@@ -47,9 +47,11 @@
         </p>
         <br>
         <p>
-            <button type="button">Reverse string</button>
-            <button type="button">UPPERCASE</button>
-            <button type="button">lowercase</button>
+            <button type="button" onclick="reverseStr()">Reverse string</button>
+            <button type="button" onclick="upper()">UPPERCASE</button>
+            <button type="button" onclick="lower()">lowercase</button>
+            <button type="button" id="trim" onclick="trimbutnotjusttrimbecausethatnameisntallowedforsomereason()">Remove trailing and leading whitespace</button>
+            <button type="button" id="undo" onclick="undo"
         </p>
         <br>
         <p>
@@ -58,8 +60,14 @@
     </form>
 
     <p>
-        <textarea id="output" rows="6" cols="50">Your formatted string will appear here!</textarea>
+        <!-- <textarea id="output" rows="6" cols="50">Your formatted string will appear here!</textarea> -->
     </p>
+
+    <br>
+    <br>
+    <div id="history">
+        EDIT HISTORY:
+    </div>
 
     <script src="scripts.js"></script>
 
