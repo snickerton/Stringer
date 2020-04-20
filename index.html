@@ -1,0 +1,59 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Stringer</title>
+    <meta name="description" content="A website that does all sorts of formatting on strings!">
+    <meta name="author" content="Tony Z">
+
+</head>
+
+<body>
+    <h1>Stringer</h1>
+    <p>A website that does all sorts of formatting on strings!</p>
+    <p>
+        <textarea id="input" rows="6" cols="50">Input the string you want to format here!</textarea>
+    </p>
+
+    <form>
+        <p>
+            <label for="character_insert">Insert a &nbsp;</label>
+            <input type="text" id="character_insert" size="3">
+            <label for="index_insert">&nbsp; after each &nbsp;</label>
+            <input type="text" id="index_insert" size="3">
+            <span>th character</span>
+
+            <button>Insert character(s)!</button>
+        </p>
+<p>
+
+            <label for="replace_old">Replace all occurences of &nbsp;</label>
+            <input type="text" id="replace_old" size="3">
+            <label for="replace_new"> &nbsp; with &nbsp;</label>
+            <input type="text" id="replace_new" size="3">
+
+            <button>Replace that stuff!</button>
+</p>
+        <p>
+            <button>Reverse string</button>
+            <button>UPPERCASE</button>
+            <button>lowercase</button>
+        </p>
+
+        <p>
+            <button type="reset">Reset all fields and forms</button>
+        </p>
+    </form>
+
+    <p>
+        <textarea id="ouput" rows="6" cols="50">Your formatted string will appear here!</textarea>
+    </p>
+
+
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
