@@ -27,30 +27,38 @@
             <input type="text" id="index_insert" size="3">
             <span>th character</span>
 
-            <button type="button" onclick="myFunction()">Insert character(s)!</button>
+            <button type="button" onclick="insertCharacters()">Insert character(s)!</button>
         </p>
-<p>
+        <br>
+        <p>
 
             <label for="replace_old">Replace all occurences of &nbsp;</label>
             <input type="text" id="replace_old" size="3">
             <label for="replace_new"> &nbsp; with &nbsp;</label>
             <input type="text" id="replace_new" size="3">
 
-            <button type="button">Replace that stuff!</button>
-</p>
+            <p>
+                <label> Fun fact: You can use regex with me!</label>
+                <!-- <input type="checkbox" id="isRegex"> -->
+                <!-- <span>Yes</span> -->
+            </p>
+
+            <button type="button" onclick="replace()">Replace that stuff!</button>
+        </p>
+        <br>
         <p>
             <button type="button">Reverse string</button>
             <button type="button">UPPERCASE</button>
             <button type="button">lowercase</button>
         </p>
-
+        <br>
         <p>
             <button type="reset">Reset all fields and forms</button>
         </p>
     </form>
 
     <p>
-        <textarea id="ouput" rows="6" cols="50">Your formatted string will appear here!</textarea>
+        <textarea id="output" rows="6" cols="50">Your formatted string will appear here!</textarea>
     </p>
 
     <script src="scripts.js"></script>
