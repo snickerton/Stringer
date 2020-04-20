@@ -117,10 +117,7 @@ function undoAction(){
     //Add the thing to history but not to undo value because things are confusing
     var input = document.getElementById("input").value;
     //if nothing changed don't add to edit history
-    if (input == output){
-       return; 
-    }
-    var node = document.createTextNode(output);
+    var node = document.createTextNode(input);
     var wrapper = document.createElement("p");
     wrapper.appendChild(document.createElement("br"))
     wrapper.appendChild(node)
